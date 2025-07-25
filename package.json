@@ -1,0 +1,22 @@
+{
+  "name": "claudeflare",
+  "version": "0.0.1",
+  "description": "A simple CLI tool that outputs Hello World",
+  "main": "bin/claudeflare.js",
+  "bin": {
+    "claudeflare": "./bin/claudeflare.js"
+  },
+  "scripts": {
+    "start": "node ./bin/claudeflare.js"
+  },
+  "keywords": [
+    "cli",
+    "hello-world"
+  ],
+  "author": "hmmhmmhm",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hmmhmmhm/claudeflare.git"
+  }
+}
