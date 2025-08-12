@@ -2,13 +2,23 @@
   "name": "claudeflare",
   "version": "0.0.1",
   "description": "A simple CLI tool that outputs Hello World",
-  "main": "bin/claudeflare.js",
+  "main": "dist/app.js",
+  "type": "module",
   "bin": {
     "claudeflare": "./bin/claudeflare.js"
   },
   "scripts": {
-    "start": "node ./bin/claudeflare.js"
+    "build": "tsc",
+    "start": "node ./bin/claudeflare.js",
+    "dev": "pnpm build && node ./bin/claudeflare.js",
+    "prepublishOnly": "pnpm build"
   },
+  "files": [
+    "dist/**/*",
+    "bin/**/*",
+    "README.md",
+    "package.json"
+  ],
   "keywords": [
     "cli",
     "hello-world"
@@ -23,7 +33,12 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/node": "^22.15.3",
+    "@types/react": "^19.1.8",
     "eslint": "^9.31.0",
+    "react": "^19.1.0",
     "typescript": "5.8.2"
+  },
+  "dependencies": {
+    "ink": "^6.0.1"
   }
 }
