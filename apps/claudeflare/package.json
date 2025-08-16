@@ -1,6 +1,6 @@
 {
   "name": "claudeflare",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A simple CLI tool that outputs Hello World",
   "main": "dist/app.js",
   "type": "module",
