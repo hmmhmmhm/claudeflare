@@ -10,6 +10,13 @@ const checkInteractiveSupport = (): boolean => {
   }
 };
 
+// 웹서버를 런타임에 동적 로딩
+setTimeout(() => {
+  import("../web/web-app.js").catch(() => {
+    console.log("웹서버 모듈을 로드할 수 없습니다.");
+  });
+}, 0);
+
 const isInteractiveSupported = checkInteractiveSupport();
 
 if (isInteractiveSupported) {

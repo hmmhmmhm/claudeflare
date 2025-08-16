@@ -8,10 +8,12 @@
     "claudeflare": "./bin/claudeflare.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --project tsconfig.json",
+    "build:web": "tsc --project tsconfig.web.json",
+    "build:all": "pnpm build && pnpm build:web",
     "start": "node ./bin/claudeflare.js",
-    "dev": "pnpm build && node ./bin/claudeflare.js",
-    "prepublishOnly": "pnpm build"
+    "dev": "pnpm build:all && node ./bin/claudeflare.js",
+    "prepublishOnly": "pnpm build:all"
   },
   "files": [
     "dist/**/*",
@@ -39,6 +41,8 @@
     "typescript": "5.8.2"
   },
   "dependencies": {
+    "@hono/node-server": "^1.18.2",
+    "hono": "^4.9.2",
     "ink": "^6.0.1"
   }
 }
